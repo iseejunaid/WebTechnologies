@@ -10,8 +10,8 @@ div{
     overflow: hidden;
 }
 img{
-    width: 280px;
-    height: 300px;
+    width: 250px;
+    height: 290px;
     border-radius: 90%;
 }
 #picdiv{
@@ -26,4 +26,14 @@ img{
     flex-direction: column;
     padding: 10%;
     background-color: #253439;
+    color: white;
+}
+ul > li{
+    font-size: 19px;
+}
+h1{
+    padding: 5px;
+}
+h2{
+    padding: 15px;
 }
