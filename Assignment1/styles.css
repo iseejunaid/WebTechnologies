@@ -1,22 +1,22 @@
-div{
-    border: 1px solid black;
-  
+.flexbox-container{
+    display:flex;
+    flex: 1;
 }
-.left {
-    float: left;
-    width: 50%;
+.left{
+    flex:0.45;
 }
-.right {
-    overflow: hidden;
+.right{
+    flex: 0.55;
 }
 img{
     width: 250px;
-    height: 290px;
+    height: 275px;
     border-radius: 90%;
+    margin: 1%;
 }
 #picdiv{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     background-color: #595551;
@@ -34,6 +34,41 @@ ul > li{
 h1{
     padding: 5px;
 }
-h2{
+#infodiv > p{
     padding: 15px;
+    font-size: 28px;
+    margin: -1%;
+}
+#objdiv{
+    border-bottom: 1px solid black;
+    border-radius: 5%;
+    padding: 7%;
+}
+.right p{
+    font-size: 28px;
+}
+#extradiv{
+    border-bottom: 1px solid black;
+    border-radius: 5%;
+    padding: 7%;
+}
+#edudiv{
+    padding: 7%;
+}
+.right h1,
+.right p,
+.right ul{
+    color:#253439;
+}
+.right ul>li{
+    margin: 20px;
+}
+.right ul>li{
+    font-size: 22px;
+}
+#infodiv>h1{
+    text-decoration: underline;
+}
+.right h1{
+    text-decoration: underline;
 }
