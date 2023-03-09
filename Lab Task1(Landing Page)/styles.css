@@ -1,0 +1,14 @@
+#logoimg{
+    height: 100px;
+    width: 100px;
+}
+button.btn.btn-outline-success {
+    margin: 1px;
+    border: 0px;
+}
+#front{
+    background-image: url("background.jpg");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
