@@ -1,0 +1,55 @@
+#logoimg{
+    height: 100px;
+    width: 100px;
+}
+button.btn.btn-outline-success {
+    margin: 1px;
+    border: 0px;
+}
+.body{
+    background-image: url("background.jpg");
+    height: 630px;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+.container-xxl{
+    margin-top: 10%;
+}
+.col h1{
+    color: white;
+    font-weight: 900;
+    font-size: 90px;
+    margin-bottom: -10px;
+}
+.col p{
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+
+}
+.col div{
+    width: 300px;
+    height: 200px;
+    margin-left: 40%;
+    background-color:#f1f1f1;
+    padding: 20px;
+    background-color: transparent;
+}
+input{
+    width: 90%;
+}
+button.btn.btn-success {
+    position: absolute;
+    margin-top: 40px;
+    margin-left: -161px;
+}
+
+#destinationdiv{
+    position: relative;
+}
+h3 {
+    color: white;
+}
+.container-fluid {
+    height: 71px;
+}
