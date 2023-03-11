@@ -182,3 +182,9 @@ button.btn-close.btn-close-white {
     font-weight: 200px;
     color: #198754;
 }
+.notfilled{
+  border: 3px solid red;
+}
+.filled{
+  border: 3px solid #198754;
+}
