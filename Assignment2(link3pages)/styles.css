@@ -162,3 +162,23 @@ button.btn-close.btn-close-white {
     margin: 20px;
     margin-top: 6px;
 }
+.signupform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.signupform div{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    flex-direction: column;
+}
+.signupform div > input{
+    width: 100%;
+    color: #198754;
+}
+.signupform h1,
+.signupform label{
+    font-weight: 200px;
+    color: #198754;
+}
