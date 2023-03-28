@@ -85,6 +85,7 @@ body, html {
 .img-container {
     margin-top: 10%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .img{
@@ -187,4 +188,74 @@ button.btn-close.btn-close-white {
 }
 .filled{
   border: 3px solid #198754;
+}
+div#container3 {
+  margin-top: 5%;
+  padding: 10px;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.card-img-top {
+  transition: transform .2s;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.card:hover .card-img-overlay {
+  opacity: 1;
+}
+h5.card-title.text-center {
+  color: white;
+  font-weight: 900;
+}
+footer {
+  background-color: black;
+  /* background-color: #f2f2f2; */
+  padding: 20px 0;
+  text-align: center;
+  /* color: #888; */
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+.all-destinations {
+  background-color: #198754;
+  color: white;
+  padding: 10px 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.all-destinations:hover {
+  transform: scale(1.1);
 }

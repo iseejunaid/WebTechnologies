@@ -57,3 +57,7 @@ function matchedShowMessage() {
 function misMatchedShowMessage() {
     alert("Passwords do not match!");
 }
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+  
