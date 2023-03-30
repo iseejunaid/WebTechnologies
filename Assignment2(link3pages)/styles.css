@@ -190,7 +190,7 @@ button.btn-close.btn-close-white {
   border: 3px solid #198754;
 }
 div#container3 {
-  margin-top: 5%;
+  margin-top: 12%;
   padding: 10px;
 }
 .card {
@@ -226,10 +226,8 @@ h5.card-title.text-center {
 }
 footer {
   background-color: black;
-  /* background-color: #f2f2f2; */
   padding: 20px 0;
   text-align: center;
-  /* color: #888; */
 }
 
 footer p {
