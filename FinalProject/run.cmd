@@ -1,3 +1,3 @@
-@echo off
+
 code .
-exit
+mongod -dbpath C:\Data\db
