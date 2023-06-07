@@ -1,6 +1,8 @@
 <%- include('./partials/header') %>
-<html>
 <title>Responses</title>
+<script src="/javascripts/responsefunctions.js"></script>
+
+<script></script>
 <body>
   <div class="container">
     <h1>Responses</h1>
@@ -18,7 +20,11 @@
             </button>
           </div>
           <div class="modal-body">
-            <input type="text" id="responseInput" class="form-control" placeholder="Enter response">
+            <input type="text" id="titleInput" class="form-control" style="margin-bottom: 5px;" placeholder="Enter title">
+            <input type="text" id="personsInput" class="form-control" style="margin-bottom: 5px;" placeholder="Enter number of persons">
+            <input type="text" id="daysInput" class="form-control" style="margin-bottom: 5px;" placeholder="Enter number of days">
+            <input type="text" id="locationInput" class="form-control" style="margin-bottom: 5px;" placeholder="Enter location">
+            <input type="text" id="priceInput" class="form-control" style="margin-bottom: 5px;" placeholder="Enter price">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" onclick="saveResponse()">Save</button>
@@ -27,49 +33,32 @@
         </div>
       </div>
     </div>
-
     <ul class="list-group">
-      <% responses.forEach(function(response, index) { %>
+      <% tours.forEach(function(tour, index) { %>
         <li class="list-group-item">
           <div class="d-flex justify-content-between align-items-center">
-            <strong>Response <%= index + 1 %>: <%= response.text %></strong>
+            <strong>Tour <%= index + 1 %>:</strong>
             <div>
-              <button class="btn btn-outline-primary mr-2">Edit</button>
-              <button class="btn btn-outline-danger">Delete</button>
+              <button class="btn btn-outline-primary mr-2" onclick="editTour('<%= tour.id %>')">Edit</button>
+              <button class="btn btn-outline-danger" onclick="deleteTour('<%= tour.id %>')">Delete</button>
             </div>
           </div>
+          <ul>
+            <li><strong>ID:</strong> <%= tour.id %></li>
+            <li><strong>Title:</strong> <%= tour.title %></li>
+            <li><strong>Persons:</strong> <%= tour.persons %></li>
+            <li><strong>Days:</strong> <%= tour.days %></li>
+            <li><strong>Price:</strong> <%= tour.price %></li>
+            <li><strong>Location:</strong> <%= tour.location %></li>
+          </ul>
         </li>
       <% }); %>
     </ul>
+    
+    <%- include('./partials/footer') %> 
   </div>
-<script>
-  function addResponse() {
-    $('#addResponseModal').modal('show');
-  }
 
-
-    function saveResponse() {
-    var response = $('#responseInput').val();
-    console.log('Saving response: ' + response);
-    // Send the response to the server using an AJAX request
-    $.ajax({
-        url: '/responses/add',
-        method: 'POST',
-        data: { response: response },
-        dataType: 'json',
-        success: function() {
-          console.log('Response saved successfully!');
-          window.location.reload();
-        },
-        error: function() {
-          console.log('Error saving response.');
-        }
-    });
-    $('#addResponseModal').modal('hide');
-  }
-  
-</script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -94,7 +94,7 @@ body, html {
 #container2{
     margin-top: -10%;
     padding: 10px;
-    background-color: lightgreen;
+    background-color: white;
 }
 .modal-content {
     width: 80%;
@@ -257,4 +257,7 @@ footer p {
 
 .all-destinations:hover {
   transform: scale(1.1);
+}
+.img-container {
+  background-color: white;
 }

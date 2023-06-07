@@ -11,8 +11,11 @@ var signupRouter = require('./routes/signup');
 var responsesRouter = require('./routes/responses');
 var responsesapiRouter = require('./routes/api/responses');
 
+
+const connectDB = require('./database/db');
 var app = express();
 
+connectDB();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
