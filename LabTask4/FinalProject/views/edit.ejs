@@ -1,0 +1,38 @@
+<%- include('./partials/header') %>
+<script src="/javascripts/responsefunctions.js"></script>
+<title>Edit Tour</title>
+<body>
+  <div class="container">
+    <h1>Edit Tour</h1>
+    <form id="editTourForm">
+      <!-- Form inputs for tour details -->
+      <div class="form-group">
+        <label for="editTitleInput">Title:</label>
+        <input type="text" class="form-control" id="editTitleInput" placeholder="Enter title" value="<%= tour.title %>">
+      </div>
+      <div class="form-group">
+        <label for="editPersonsInput">Persons:</label>
+        <input type="number" class="form-control" id="editPersonsInput" placeholder="Enter number of persons" value="<%= tour.persons %>">
+      </div>
+      <div class="form-group">
+        <label for="editDaysInput">Days:</label>
+        <input type="number" class="form-control" id="editDaysInput" placeholder="Enter number of days" value="<%= tour.days %>">
+      </div>
+      <div class="form-group">
+        <label for="editPriceInput">Price:</label>
+        <input type="number" class="form-control" id="editPriceInput" placeholder="Enter price" value="<%= tour.price %>">
+      </div>
+      <div class="form-group">
+        <label for="editLocationInput">Location:</label>
+        <input type="text" class="form-control" id="editLocationInput" placeholder="Enter location" value="<%= tour.location %>">
+      </div>
+      <!-- Save and Cancel buttons -->
+      <button type="submit" class="btn btn-primary" onclick="updateTour('<%= tour.id %>')">Save</button>
+      <a href="./" class="btn btn-secondary">Cancel</a>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

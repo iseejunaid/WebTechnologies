@@ -1,0 +1,64 @@
+<%- include('./partials/header') %>
+<title>Responses</title>
+<script src="/javascripts/responsefunctions.js"></script>
+
+<script></script>
+<body>
+  <div class="container">
+    <h1>Responses</h1>
+
+    <a class="btn btn-outline-success mb-3" href="#" onclick="addResponse()">Add</a>
+
+    <!-- Add Response Modal -->
+    <div class="modal fade" id="addResponseModal" tabindex="-1" role="dialog" aria-labelledby="addResponseModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addResponseModalLabel">Add Response</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="text" id="titleInput" class="form-control" style="margin-bottom: 5px;" placeholder="Enter title">
+            <input type="text" id="personsInput" class="form-control" style="margin-bottom: 5px;" placeholder="Enter number of persons">
+            <input type="text" id="daysInput" class="form-control" style="margin-bottom: 5px;" placeholder="Enter number of days">
+            <input type="text" id="locationInput" class="form-control" style="margin-bottom: 5px;" placeholder="Enter location">
+            <input type="text" id="priceInput" class="form-control" style="margin-bottom: 5px;" placeholder="Enter price">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="saveResponse()">Save</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="list-group">
+      <% tours.forEach(function(tour, index) { %>
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between align-items-center">
+            <strong>Tour <%= index + 1 %>:</strong>
+            <div>
+              <button class="btn btn-outline-primary mr-2" onclick="editTour('<%= tour.id %>')">Edit</button>
+              <button class="btn btn-outline-danger" onclick="deleteTour('<%= tour.id %>')">Delete</button>
+            </div>
+          </div>
+          <ul>
+            <li><strong>ID:</strong> <%= tour.id %></li>
+            <li><strong>Title:</strong> <%= tour.title %></li>
+            <li><strong>Persons:</strong> <%= tour.persons %></li>
+            <li><strong>Days:</strong> <%= tour.days %></li>
+            <li><strong>Price:</strong> <%= tour.price %></li>
+            <li><strong>Location:</strong> <%= tour.location %></li>
+          </ul>
+        </li>
+      <% }); %>
+    </ul>
+    
+    <%- include('./partials/footer') %> 
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
